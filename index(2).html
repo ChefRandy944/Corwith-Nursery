@@ -292,6 +292,65 @@
     .chip-x:hover { opacity: 1; }
 
     /* ── GRID ── */
+    /* ── VIDEO SECTION ── */
+    .video-section {
+      padding: 1rem 1rem 0.4rem;
+      background: var(--soil);
+    }
+
+    .video-intro {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 0.6rem;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #0f0c08;
+      border: 1px solid var(--border);
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ── PRICING NOTE (shared) ── */
+    .price-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* "from $X" on card */
+    .card-price {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--straw);
+      margin-top: 0.55rem;
+    }
+
+    .card-price span {
+      font-size: 0.55rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-right: 0.25rem;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -628,6 +687,25 @@
 <!-- ACTIVE CHIPS -->
 <div class="active-chips" id="active-chips"></div>
 
+<!-- ═══════════════════════════════════════════════════
+     DRONE VIDEO
+     To change the video later: replace the ID after
+     "embed/" below with your new YouTube ID.
+     A link like  https://youtu.be/ABC123xyz
+     means the ID is  ABC123xyz
+     ═══════════════════════════════════════════════════ -->
+<div class="video-section">
+  <div class="video-intro">A look over the farm</div>
+  <div class="video-frame">
+    <iframe
+      src="https://www.youtube.com/embed/CKinfN23PAU"
+      title="Corwith Nursery drone tour"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy"></iframe>
+  </div>
+</div>
+
 <!-- GRID -->
 <div class="grid" id="grid">
 
@@ -656,7 +734,7 @@
   <div class="card"
        data-type="evergreen" data-avail="available" data-condition="excellent"
        data-species="Thuja standishii × plicata" data-common="Green Giant Arborvitae"
-       data-size="12-14"
+       data-size="12-14" data-price="$550"
        data-caliper="2–3 in" data-height="12–14 ft" data-qty="50+"
        data-notes="Field-grown, B&amp;B. Dense pyramidal form with rich green foliage. Excellent for privacy screening and windbreaks. Fast growers — typically 3–5 ft per year once established. No serious pest or disease issues.">
     <div class="card-img-wrap">
@@ -674,6 +752,7 @@
         <div class="spec"><span class="spec-label">Height</span><span class="spec-value">12–14 ft</span></div>
         <div class="spec"><span class="spec-label">Qty</span><span class="spec-value">50+</span></div>
       </div>
+      <div class="card-price"><span>from</span>$550</div>
     </div>
   </div>
 
@@ -681,7 +760,7 @@
   <div class="card"
        data-type="evergreen" data-avail="available" data-condition="excellent"
        data-species="Thuja standishii × plicata" data-common="Green Giant Arborvitae"
-       data-size="10-12"
+       data-size="10-12" data-price="$350"
        data-caliper="1.5–2 in" data-height="10–12 ft" data-qty="50+"
        data-notes="Field-grown, B&amp;B. Dense pyramidal form with rich green foliage. Excellent for privacy screening and windbreaks. Fast growers — typically 3–5 ft per year once established. No serious pest or disease issues.">
     <div class="card-img-wrap">
@@ -699,6 +778,7 @@
         <div class="spec"><span class="spec-label">Height</span><span class="spec-value">10–12 ft</span></div>
         <div class="spec"><span class="spec-label">Qty</span><span class="spec-value">50+</span></div>
       </div>
+      <div class="card-price"><span>from</span>$350</div>
     </div>
   </div>
 
@@ -706,7 +786,7 @@
   <div class="card"
        data-type="evergreen" data-avail="available" data-condition="excellent"
        data-species="Cupressus × leylandii" data-common="Leyland Cypress"
-       data-size="12-14"
+       data-size="12-14" data-price="$350"
        data-caliper="2–3 in" data-height="12–14 ft" data-qty="50+"
        data-notes="Field-grown, B&amp;B. Narrow conical form, dense dark green foliage. One of the fastest-growing privacy trees available. Excellent for screening, property lines, and noise buffers. Tolerates a range of soil types.">
     <div class="card-img-wrap">
@@ -724,6 +804,7 @@
         <div class="spec"><span class="spec-label">Height</span><span class="spec-value">12–14 ft</span></div>
         <div class="spec"><span class="spec-label">Qty</span><span class="spec-value">50+</span></div>
       </div>
+      <div class="card-price"><span>from</span>$350</div>
     </div>
   </div>
 
@@ -731,7 +812,7 @@
   <div class="card"
        data-type="evergreen" data-avail="available" data-condition="excellent"
        data-species="Cupressus × leylandii" data-common="Leyland Cypress"
-       data-size="10-12"
+       data-size="10-12" data-price="$300"
        data-caliper="1.5–2 in" data-height="10–12 ft" data-qty="50+"
        data-notes="Field-grown, B&amp;B. Narrow conical form, dense dark green foliage. One of the fastest-growing privacy trees available. Excellent for screening, property lines, and noise buffers. Tolerates a range of soil types.">
     <div class="card-img-wrap">
@@ -749,6 +830,7 @@
         <div class="spec"><span class="spec-label">Height</span><span class="spec-value">10–12 ft</span></div>
         <div class="spec"><span class="spec-label">Qty</span><span class="spec-value">50+</span></div>
       </div>
+      <div class="card-price"><span>from</span>$300</div>
     </div>
   </div>
 
@@ -780,9 +862,10 @@
         <div><div class="sheet-spec-label">Caliper</div><div class="sheet-spec-value" id="sheet-caliper"></div></div>
         <div><div class="sheet-spec-label">Height</div><div class="sheet-spec-value" id="sheet-height"></div></div>
         <div><div class="sheet-spec-label">Qty</div><div class="sheet-spec-value" id="sheet-qty"></div></div>
-        <div><div class="sheet-spec-label">Form</div><div class="sheet-spec-value">B&amp;B</div></div>
+        <div><div class="sheet-spec-label">Price</div><div class="sheet-spec-value" id="sheet-price"></div></div>
       </div>
       <div class="sheet-notes" id="sheet-notes"></div>
+      <div class="price-note" style="margin-top:1rem;">Dig &amp; delivery available — call for a quote.</div>
       <a href="mailto:CorwithNursery@proton.me" class="sheet-inquire" id="sheet-inquire">Inquire About This Tree</a>
     </div>
   </div>
@@ -988,6 +1071,7 @@
       document.getElementById('sheet-caliper').textContent = card.dataset.caliper;
       document.getElementById('sheet-height').textContent  = card.dataset.height;
       document.getElementById('sheet-qty').textContent     = card.dataset.qty;
+      document.getElementById('sheet-price').textContent   = card.dataset.price ? 'from ' + card.dataset.price : '—';
       document.getElementById('sheet-notes').textContent   = card.dataset.notes;
 
       // Pre-fill email subject
